@@ -38,4 +38,11 @@ class SomeBusinessMockAnnotationsTest {
 		int result = businessImpl.findTheGreatestFromAllData();
 		assertEquals(2, result);
 	}
+	
+	@Test
+	void testFindNoValue() {
+		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] {});
+		int result = businessImpl.findTheGreatestFromAllData();
+		assertEquals(Integer.MIN_VALUE, result);
+	}
 }

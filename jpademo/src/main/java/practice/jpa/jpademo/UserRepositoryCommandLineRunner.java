@@ -31,7 +31,5 @@ public class UserRepositoryCommandLineRunner implements CommandLineRunner {
 		
 		List<User> users = userRepository.findAll();
 		log.info("All Users : " + users);
-		
-		
 	}
 }

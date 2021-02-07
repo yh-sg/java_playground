@@ -35,3 +35,17 @@ public class UserDAOService {
 		return user.getId();
 	}
 }
+
+//This will causes big trouble if there are many entity!!!
+//Resolve? Use Spring Data - Just define your interface and spring data will provide implementation for it
+
+//public class SomeEntityDAOService {
+//	
+//	
+//	@PersistenceContext
+//	private EntityManager entityManager;
+//	
+//	public long insert(User user) {
+//		entityManager.persist(user);
+//		return user.getId();
+//	}

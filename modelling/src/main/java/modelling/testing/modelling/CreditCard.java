@@ -9,6 +9,7 @@ public class CreditCard {
 	UUID id = UUID.randomUUID();
 	
 	private Money balance;
+	private int withdrawals;
 	
 	public CreditCard(Money balance) {
 		this.balance = balance;
@@ -26,6 +27,7 @@ public class CreditCard {
 	}
 	
 	Result repay(Money repaymentAmount) {
+		balance = balance.add(repaymentAmount);
 		return Result.Success;
 	}
 	

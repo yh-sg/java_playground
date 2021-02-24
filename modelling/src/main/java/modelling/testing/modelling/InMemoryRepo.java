@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("CreditDao")
 public class InMemoryRepo implements CreditCardRepository {
 	
 	private final Map<UUID, CreditCard> cards = new HashMap<>();

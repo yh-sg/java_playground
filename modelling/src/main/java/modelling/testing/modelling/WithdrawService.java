@@ -3,12 +3,17 @@ package modelling.testing.modelling;
 import java.util.UUID;
 
 import org.javamoney.moneta.Money;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public class WithdrawService {
 	
+	@Autowired
 	private final CreditCardRepository creditCardRepository;
 	
-	public WithdrawService(CreditCardRepository creditCardRepository) {
+	public WithdrawService(@Qualifier("CreditDao")CreditCardRepository creditCardRepository) {
 		this.creditCardRepository = creditCardRepository;
 	}
 	

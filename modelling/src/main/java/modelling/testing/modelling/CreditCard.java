@@ -3,10 +3,17 @@ package modelling.testing.modelling;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import org.javamoney.moneta.Money;
 
+@Entity
 public class CreditCard {
 	
+	@Id
+	@GeneratedValue
 	UUID id = UUID.randomUUID();
 	
 	private BigDecimal balance;

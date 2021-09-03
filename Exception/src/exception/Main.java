@@ -50,6 +50,10 @@ public class Main {
 			int result = i / (j/2);
 		}catch(InvalidStatementException e) {
 			//to re-catch and throw again. So that it will not catch by other exception
+			//Do take note, exception is for user/developer cases. 
+			System.out.println(e.getMessage());
+			writeInvalidStatementExceptionToLog(e); //Developer use logger, this example simulate logger
+			
 			e.getMessage();
 			e.getCause();
 			throw e;
@@ -59,6 +63,21 @@ public class Main {
 		}catch(Exception e){
 		//	do something on exception e
 		}
+	}
+	
+	//Uses exceptions for standard logic control flow
+	//Uses exceptions to exit back multiple methods to call stack
+	//Uses exceptions to pass data values not related to an error
+	/*************Logger example***************/
+	static void writeInvalidStatementExceptionToLog(InvalidStatementException e) {
+		System.err.println("**************************");
+		System.err.println("Info written to log system");
+		System.err.println("**************************");
+		
+		System.err.println(e.getMessage());
+		if(e.getCause()!=null)
+			System.err.println(e.getCause());
+		e.printStackTrace(System.err);
 	}
 
 }
@@ -87,4 +106,5 @@ public class Main {
 //} catch (FileNotFoundException fnfe) {
 //    fnfe.printStackTrace();
 //}
+
 

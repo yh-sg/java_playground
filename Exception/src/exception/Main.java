@@ -34,6 +34,32 @@ public class Main {
 		}
 		return reversedString;
 	}
+	
+/*************Catch different exceptions(From top(Most specific one shld be on top) to bottom(More generic ones on bottom))****************/
+	
+	//Checked exceptions - Compiler raises an error if not handled (IOException)
+	//Unchecked exceptions - Compiler does not enforce handling (RunTimeException)
+	
+	private void arithemetic() throws InvalidStatementException {
+		int i = 5;
+		int j = 3;
+		try {
+			if(j==2) {
+				throw new InvalidStatementException("Cannot be divided by 0");
+			}
+			int result = i / (j/2);
+		}catch(InvalidStatementException e) {
+			//to re-catch and throw again. So that it will not catch by other exception
+			e.getMessage();
+			e.getCause();
+			throw e;
+		}
+		catch(ArithmeticException e){
+		//do something about ArithmeticExpcetion
+		}catch(Exception e){
+		//	do something on exception e
+		}
+	}
 
 }
 /******Typical TryCatch Block******/
@@ -61,3 +87,4 @@ public class Main {
 //} catch (FileNotFoundException fnfe) {
 //    fnfe.printStackTrace();
 //}
+

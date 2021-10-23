@@ -10,7 +10,7 @@ public class App
     public static void main( String[] args )
     {
     	//PainPoint --> alot of such hardcoded references around the projects, spring solve such issues
-//        SpeakerService service = new SpeakerServiceImpl();
+    	//SpeakerService service = new SpeakerServiceImpl();
     	
     	ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
     	

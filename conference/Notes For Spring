@@ -1,0 +1,9 @@
+Spring Scopes(@Scope)
+	-Valid in any configuration
+		-Singleton(The default, one instantiation, single instance per spring container)
+		-Prototype(opposite of singleton)
+	-Valid only in web-aware Spring projects
+		-Request
+		-Session
+		-Global
+		

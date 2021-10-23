@@ -7,12 +7,22 @@ import spring.demo.conference.repository.HibernateSpeakerRepository;
 import spring.demo.conference.repository.HibernateSpeakerRepositoryImpl;
 
 public class SpeakerServiceImpl implements SpeakerService {
+
+	private HibernateSpeakerRepository repository;
 	
-	private HibernateSpeakerRepository repository = new HibernateSpeakerRepositoryImpl();
-	
+	//Constructor Injection
+	public SpeakerServiceImpl (HibernateSpeakerRepository speakerRepository) {
+		repository = speakerRepository;
+	}
+
 	@Override
-	public List<Speaker> findAll(){
+	public List<Speaker> findAll() {
 		return repository.findAll();
 	}
-	
+
+	//Setter Injection
+	public void setRepository(HibernateSpeakerRepository repository) {
+		this.repository = repository;
+	}
+
 }

@@ -7,3 +7,10 @@ Spring Scopes(@Scope)
 		-Session
 		-Global
 		
+Bean Lifecycle
+	Instantiation->Populate Properties->BeanNameAware->BeanFactoryAware->Pre Initialization - BeanPostProcessors->InitBean->InitMethod-> Post Init - BeanPostProcessors
+	
+Bean Profiles
+	-Adapt Environments
+	-Runtime Configuration
+	E.g. @Profile("test"), @Profile("dev"), @Profile("prod")

@@ -2,6 +2,8 @@ package spring.demo.conference.service;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,14 +13,19 @@ import spring.demo.conference.repository.HibernateSpeakerRepository;
 @Service("speakerService")
 public class SpeakerServiceImpl implements SpeakerService {
 
+	@Autowired
 	private HibernateSpeakerRepository repository;
 	
 	public SpeakerServiceImpl() {
 		System.out.println("SpeakServiceImpl no agrs constructor");
 	}
 	
+	@PostConstruct //This is coming from bean-lifecycle example, should use for configurations but not database connection. let spring handle for database connections. 
+	private void initialize() {
+		System.out.println("Called after the constructors");
+	}
+	
 	//Constructor Injection
-	@Autowired
 	public SpeakerServiceImpl (HibernateSpeakerRepository speakerRepository) {
 		System.out.println("SpeakServiceImpl repository constructor");
 		repository = speakerRepository;

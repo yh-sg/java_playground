@@ -8,10 +8,7 @@ public class App
     	try {
     		ProductComponent comp = new ProductComponent();
     		
-    		if(comp.tryConnection()) 
-    			System.out.println("Connection was success");
-    		else 
-    			System.out.println("Connection was failure");
+    		comp.tryConnection(50.0, 100.0); 
     		
     	}catch(Exception e) {
     		ExceptionHandler.handleException(e);

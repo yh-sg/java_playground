@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: local
+app:
+  version: 1
+ 
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flyway
+    username: 
+    password: 
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true

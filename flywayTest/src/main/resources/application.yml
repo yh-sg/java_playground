@@ -3,6 +3,10 @@ spring:
     active: local
 app:
   version: 1
+  
+logging:
+  level:
+    org.flywaydb: INFO
  
 ---
 spring:

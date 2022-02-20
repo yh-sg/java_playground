@@ -1,14 +1,13 @@
 package com.example.mapperdemo.dto;
 
 import java.util.Date;
-import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
 
 @Data
-public class AuthorAllDto {
+public class AuthorDto {
     @JsonProperty("id")
     private int id;
 
@@ -20,7 +19,4 @@ public class AuthorAllDto {
 
     @JsonProperty("birthDate")
     private Date birthDate;
-
-    @JsonProperty("books")
-    private Set<BookSlimDto> books;
 }

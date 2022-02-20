@@ -19,6 +19,8 @@ import javax.persistence.TemporalType;
 import javax.persistence.JoinColumn;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @Data
 @Entity
@@ -48,5 +50,7 @@ public class Author {
             joinColumns = @JoinColumn(name = "author_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id")
     )
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     private Set<Book> books = new HashSet<>();
 }

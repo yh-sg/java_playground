@@ -17,5 +17,3 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
-    generate-ddl: true
-    hibernate.ddl-auto: create

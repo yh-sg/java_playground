@@ -11,4 +11,5 @@ public class BookSlimDto {
 
     @JsonProperty("title")
     private String title;
+
 }

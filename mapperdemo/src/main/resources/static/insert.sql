@@ -4,3 +4,7 @@ INSERT INTO tbl_book (release_date,title) VALUES ('1999-01-02','DTOs Are Awesome
 INSERT INTO tbl_book (release_date,title) VALUES ('1999-01-02','12 keys to academic success');
 INSERT INTO tbl_author (name, surname, birth_date) VALUES ('Mary','Brown','1997-07-01');
 INSERT INTO tbl_author (name, surname, birth_date) VALUES ('Johnny','Black','1991-07-01');
+INSERT INTO author_book (book_id, author_id) VALUES (1,2);
+INSERT INTO author_book (book_id, author_id) VALUES (1,3);
+INSERT INTO author_book (book_id, author_id) VALUES (2,1);
+INSERT INTO author_book (book_id, author_id) VALUES (2,2);

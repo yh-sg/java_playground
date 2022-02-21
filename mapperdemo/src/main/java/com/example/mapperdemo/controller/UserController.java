@@ -24,7 +24,6 @@ public class UserController {
 	
     @GetMapping("/{id}")
     public ResponseEntity<UserGetDto> getById(@PathVariable(value = "id") int id) {
-        return new 
-        		ResponseEntity<>(mapstructMapper.userToUserGetDto(userService.getOneUser(id)),HttpStatus.OK);
+        return new ResponseEntity<>(mapstructMapper.userToUserGetDto(userService.getOneUser(id)),HttpStatus.OK);
     }
 }

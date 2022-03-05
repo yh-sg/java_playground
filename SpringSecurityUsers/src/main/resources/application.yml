@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: local
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+ 
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/registration
+    username: ${DBUSER}
+    password: ${DBPASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop

@@ -45,10 +45,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         provider.setUserDetailsService(appUserServiceImpl);
         return provider;
     }
-    
-    @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
 
 }

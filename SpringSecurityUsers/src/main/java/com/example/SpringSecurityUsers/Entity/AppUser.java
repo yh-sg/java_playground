@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,6 +21,7 @@ import com.example.SpringSecurityUsers.Utils.AppUserRole;
 import lombok.Data;
 
 @Data @Entity
+@Table(name="tbl_app_user")
 public class AppUser implements UserDetails {
 	
 	@SequenceGenerator(

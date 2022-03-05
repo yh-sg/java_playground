@@ -16,7 +16,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.example.SpringSecurityUsers.Entity.AppUser;
 import com.example.SpringSecurityUsers.Repository.AppUserRepository;
-import com.example.SpringSecurityUsers.ServiceImpl.AppUserServiceImpl;
+import com.example.SpringSecurityUsers.Service.ServiceImpl.AppUserServiceImpl;
 import com.example.SpringSecurityUsers.Utils.AppUserRole;
 
 @ActiveProfiles("test")

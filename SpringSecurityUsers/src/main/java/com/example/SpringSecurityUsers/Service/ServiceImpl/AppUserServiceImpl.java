@@ -1,4 +1,4 @@
-package com.example.SpringSecurityUsers.ServiceImpl;
+package com.example.SpringSecurityUsers.Service.ServiceImpl;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,7 +1,9 @@
 package deadLock;
 
 public class DeadLockBasics {
-	/* What is a DeadLock?
+	/* Thread interference errors(Race Conditions) occur when multiple threads try to read and write a shared variable concurrently, and these read and write operations overlap in execution.
+	 * 
+	 * What is a DeadLock?
 	 * 
 	 * Firstly, a lock occurs when multiple processes tries to access the same resource at the same time.
 	 * 
